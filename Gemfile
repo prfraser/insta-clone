@@ -8,6 +8,7 @@ end
 gem "twitter-bootstrap-rails"
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

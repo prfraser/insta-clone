@@ -1,0 +1,22 @@
+<h1><%= @tag.name %></h1>
+<% @posts.each do |post| %>
+	<dl class="dl-horizontal">
+	  <dd><%= image_tag post.img_url, size: "320x200" %></dd>
+	</dl>
+
+	<dl class="dl-horizontal">
+	  <dd><%= image_tag post.avatar.url, size: "320x200" %></dd>
+	</dl>
+
+
+	<dl class="dl-horizontal">
+	  <dd><%= post.caption %></dd>
+	</dl>
+
+	<dl class="dl-horizontal">
+	  <dd><%= post.tag_list %></dd>
+	</dl>
+<% end %>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'btn btn-default'  %>
