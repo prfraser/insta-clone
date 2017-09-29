@@ -19,6 +19,8 @@
   <dd><%= @post.caption %></dd>
 </dl>
 
+<%= render 'comments/form', comment: @comment %>
+
 <%= link_to t('.back', :default => t("helpers.links.back")),
               posts_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
