@@ -5,5 +5,5 @@ class Post < ApplicationRecord
   acts_as_taggable_on :tags
 
 	belongs_to :user
-	has_many :comments
+	has_many :comments, dependent: :destroy
 end

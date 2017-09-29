@@ -1,0 +1,14 @@
+<dl class="dl-horizontal">
+  <dt><strong>User ID:</strong></dt>
+  <dd><%= comment.user.email %></dd>
+</dl>
+
+<dl class="dl-horizontal">
+  <dt><strong>Comment:</strong></dt>
+  <dd><%= comment.title %></dd>
+   <dd><%= link_to 'Destroy', [comment.post, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' },
+               :class => 'btn btn-danger'  %></dd>
+</dl>
+

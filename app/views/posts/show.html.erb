@@ -13,7 +13,6 @@
   <dd><%= image_tag @post.avatar.url, size: "320x200" %></dd>
 </dl>
 
-
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:caption) %>:</strong></dt>
   <dd><%= @post.caption %></dd>
@@ -24,7 +23,13 @@
   <dd><%= @post.tag_list %></dd>
 </dl>
 
-<%= render 'comments/form', comment: @comment %>
+<div class="page-header">
+  <h2>Comments</h2>
+</div>
+<%= render @post.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
